@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --Eerie-Black: #16062B;
+    --Russian-Violet: #341C4F;
+    --Indigo: #58077D;
+    --Vivid-Mulberry: #BC15F4;
+    --Chinese-Purple: #871C9C;
+    --Banana-Yellow: #FFE53D;
+    --Banana-Yellow-50: #ffe53d80;
+    --Banana-Yellow-80: #ffe53dcc;
+    --White: #FFFFFF;
+    --Bright-Turquoise: #00E0D1;
+    --Electric-Blue: #6CF9F2;
+    --Dark-Gunmetal: #1B2428;
+    --Chinese-Black: #160628;
+    --Chinese-Silver: #CCCCCC;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-image: linear-gradient(231deg, var(--Chinese-Black) 0%, var(--Russian-Violet) 50%, var(--Indigo) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    width: 90%;
+    max-width: 450px;
+    margin: 0em auto;
+}
+
+#heading{
+    font-size: 3.2em;
+    font-weight: 600;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--White);
+    opacity: 0.75;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+}
+
+#password-display-container{
+    width: 100%;
+    background-color: var(--Eerie-Black);
+    border-bottom: 0.58em solid var(--Indigo);
+    border-radius: 1.6em;
+    margin: 1.6em 0em;
+    display: flex;
+    align-items: center;
+}
+
+#password-display{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 2.4em;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: var(--Banana-Yellow);
+    padding: 0.77em 0em 0.77em 0.67em;
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+    margin-top: 0.2em;
+}
+
+#password-display::placeholder{
+    color: var(--Banana-Yellow);
+    opacity: 0.75;
+    text-transform: uppercase;
+}
+
+#password-display:focus{
+    outline: none;
+}
+
+#copy-button{
+    width: 4.8em;
+    height: 2.4em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0em 1.2em;
+}
+
+#copy-button img{
+    width: 100%;
+    height: 100%;
+}
+
+.message{
+    background-color: var(--Chinese-Purple);
+    color: var(--Banana-Yellow);
+    font-size: 1.5em;
+    font-family: 'League Spartan', sans-serif;
+    border-radius: 0.8em;
+    padding: 0.4em 0.5em 0.25em 0.5em;
+    position: absolute;
+    left: -0.5em;
+    top: -1.75em;
+    transform: scale(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.active{
+    transform: scale(1);
+}
+
+#input-container{
+    width: 100%;
+    background-color: var(--Eerie-Black);
+    border-bottom: 0.58em solid var(--Indigo);
+    border-radius: 1.6em;
+    padding: 3.2em;
+}
+
+#password-length-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#password-length-container p:nth-child(1){
+    font-size: 2.4em;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--White);
+}
+
+#password-length-container p:nth-child(2){
+    font-size: 2.4em;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--Banana-Yellow);
+    font-weight: 600;
+}
+
+#password-length-slider{
+    appearance: none;
+    width: 100%;
+    height: 1em;
+    border-radius: 1.6em;
+    background-color: var(--Russian-Violet);
+    background-image: linear-gradient(var(--Vivid-Mulberry), var(--Vivid-Mulberry));
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 2em 0em;
+}
+
+#password-length-slider:focus{
+    outline: 0.15em solid var(--Banana-Yellow);
+}
+
+#password-length-slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 2.4em;
+    height: 2.4em;
+    border-radius: 50%;
+    background-color: var(--Banana-Yellow);
+    cursor: pointer;
+    box-shadow: 0em 0em 2em 0em var(--Banana-Yellow-50);
+    transition: background-color 100ms ease-in, box-shadow 100ms ease-in, outline 100ms ease-in;
+    position: relative;
+    z-index: 1;
+}
+
+#password-length-slider::-webkit-slider-thumb:hover{
+    background-color: var(--Eerie-Black);
+    outline: 0.1em solid var(--Banana-Yellow);
+    box-shadow: 0em 0em 2em 0em var(--Banana-Yellow-80);
+}
+
+#password-length-slider::-moz-range-thumb{
+    appearance: none;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 50%;
+    background-color: var(--Banana-Yellow);
+    cursor: pointer;
+    box-shadow: 0em 0em 2em 0em var(--Banana-Yellow-80);
+    border: none;
+}
+
+.include-character{
+    display: flex;
+    align-items: center;
+    column-gap: 1.4em;
+    margin: 1.5em 0em;
+}
+
+.include-character label{
+    font-size: 2em;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--White);
+    letter-spacing: 0.075em;
+    padding-top: 0.2em;
+}
+
+.include-character input{
+    appearance: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.05em solid var(--Bright-Turquoise);
+    border-radius: 0.43em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 250ms ease-in-out;
+}
+
+.include-character input::before{
+    content: '\002714';
+    font-size: 1.28em;
+    font-weight: 600;
+    color: var(--Dark-Gunmetal);
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.include-character input:checked{
+    background-color: var(--Bright-Turquoise);
+}
+
+.include-character input:checked::before{
+    opacity: 1;
+}
+
+#strength-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5em 0em;
+}
+
+#strength-container p{
+    font-size: 2.4em;
+    color: var(--White);
+    font-family: 'League Spartan', sans-serif;
+}
+
+#strength-indicator{
+    width: 2.4em;
+    height: 2.4em;
+    border-radius: 50%;
+    background-color: var(--Chinese-Silver);
+    box-shadow: 0em 0em 1.2em 0.1em var(--Chinese-Silver);
+    transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+#generate-button{
+    width: 100%;
+    font-size: 2em;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--Vivid-Mulberry);
+    color: var(--Banana-Yellow);
+    text-transform: uppercase;
+    border-radius: 0.6em;
+    border: none;
+    border-bottom: 0.28em solid var(--Banana-Yellow);
+    padding: 0.8em 0em;
+}

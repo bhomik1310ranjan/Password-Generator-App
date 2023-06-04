@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Password Generator
+        </title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+        <link rel = "stylesheet" href = "styles.css"/>
+        <link rel = "icon" href = "assets/favicon.png"/>
+    </head>
+    <body>
+        <main id = "wrapper">
+            <div id = "content">
+                <h1 id = "heading">Password Generator</h1>
+
+                <div id = "password-display-container">
+                    <input readonly placeholder = "Password" id = "password-display">
+                    <button id = "copy-button">
+                        <span class = "message"></span>
+                        <img src = "assets/copy.svg" alt = "Copy"/>
+                    </button>
+                </div>
+
+                <div id = "input-container">
+                    <div id = "password-length-container">
+                        <p>Password Length</p>
+                        <p id = "password-length"></p>
+                    </div>
+
+                    <input type = "range" min = "1" max = "20" step = "1" id = "password-length-slider"/>
+                    
+                    <div class = "include-character">
+                        <input type = "checkbox" id = "include-uppercase-letters" checked = "true">
+                        <label for = "include-uppercase-letters">Include Uppercase Letters</label>
+                    </div>
+                    
+                    <div class = "include-character">
+                        <input type = "checkbox" id = "include-lowercase-letters">
+                        <label for = "include-lowercase-letters">Include Lowercase Letters</label>
+                    </div>
+                    
+                    <div class = "include-character">
+                        <input type = "checkbox" id = "include-numbers">
+                        <label for = "include-numbers">Include Numbers</label>
+                    </div>
+                    
+                    <div class = "include-character">
+                        <input type = "checkbox" id = "include-symbols">
+                        <label for = "include-symbols">Include Symbols</label>
+                    </div>
+
+                    <div id = "strength-container">
+                        <p>Strength</p>
+                        <div id = "strength-indicator"></div>
+                    </div>
+
+                    <button id = "generate-button">Generate Password</button>
+                </div>
+            </div>
+        </main>
+
+        <script src = "index.js"></script>
+        <script src="https://kit.fontawesome.com/463da5afdf.js" crossorigin="anonymous"></script>
+    </body>
+</html>
