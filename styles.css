@@ -35,19 +35,16 @@ html{
     overflow-x: hidden;
     overflow-y: auto;
     background-image: linear-gradient(231deg, var(--Chinese-Black) 0%, var(--Russian-Violet) 50%, var(--Indigo) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #content{
     width: 90%;
     max-width: 450px;
-    margin: 0em auto;
+    margin: 5em auto;
 }
 
 #heading{
-    font-size: 3.2em;
+    font-size: 2.6em;
     font-weight: 600;
     font-family: 'League Spartan', sans-serif;
     text-align: center;
@@ -72,11 +69,11 @@ html{
     width: 100%;
     background-color: transparent;
     border: none;
-    font-size: 2.4em;
+    font-size: 2em;
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     color: var(--Banana-Yellow);
-    padding: 0.77em 0em 0.77em 0.67em;
+    padding: 0.77em 0em 0.77em 1.2em;
     letter-spacing: 0.05em;
     line-height: 1.25em;
     margin-top: 0.2em;
@@ -93,13 +90,13 @@ html{
 }
 
 #copy-button{
-    width: 4.8em;
+    width: 6em;
     height: 2.4em;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: relative;
-    padding: 0em 1.2em;
+    padding: 0em 2em 0em 1.6em;
 }
 
 #copy-button img{
@@ -115,7 +112,7 @@ html{
     border-radius: 0.8em;
     padding: 0.4em 0.5em 0.25em 0.5em;
     position: absolute;
-    left: -0.5em;
+    left: -0.28em;
     top: -1.75em;
     transform: scale(0);
     transition: transform 250ms ease-in-out;
@@ -130,7 +127,7 @@ html{
     background-color: var(--Eerie-Black);
     border-bottom: 0.58em solid var(--Indigo);
     border-radius: 1.6em;
-    padding: 3.2em;
+    padding: 2.4em;
 }
 
 #password-length-container{
@@ -141,13 +138,13 @@ html{
 }
 
 #password-length-container p:nth-child(1){
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-family: 'League Spartan', sans-serif;
     color: var(--White);
 }
 
 #password-length-container p:nth-child(2){
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-family: 'League Spartan', sans-serif;
     color: var(--Banana-Yellow);
     font-weight: 600;
@@ -166,7 +163,7 @@ html{
 }
 
 #password-length-slider:focus{
-    outline: 0.15em solid var(--Banana-Yellow);
+    border: 0.15em solid var(--Banana-Yellow);
 }
 
 #password-length-slider::-webkit-slider-thumb{
@@ -177,14 +174,14 @@ html{
     background-color: var(--Banana-Yellow);
     cursor: pointer;
     box-shadow: 0em 0em 2em 0em var(--Banana-Yellow-50);
-    transition: background-color 100ms ease-in, box-shadow 100ms ease-in, outline 100ms ease-in;
+    transition: background-color 100ms ease-in, box-shadow 100ms ease-in, border 100ms ease-in;
     position: relative;
     z-index: 1;
 }
 
 #password-length-slider::-webkit-slider-thumb:hover{
     background-color: var(--Eerie-Black);
-    outline: 0.1em solid var(--Banana-Yellow);
+    border: 0.1em solid var(--Banana-Yellow);
     box-shadow: 0em 0em 2em 0em var(--Banana-Yellow-80);
 }
 
@@ -207,7 +204,7 @@ html{
 }
 
 .include-character label{
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'League Spartan', sans-serif;
     color: var(--White);
     letter-spacing: 0.075em;
@@ -254,7 +251,7 @@ html{
 }
 
 #strength-container p{
-    font-size: 2.4em;
+    font-size: 2.2em;
     color: var(--White);
     font-family: 'League Spartan', sans-serif;
 }
@@ -270,7 +267,7 @@ html{
 
 #generate-button{
     width: 100%;
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     cursor: pointer;
@@ -281,4 +278,42 @@ html{
     border: none;
     border-bottom: 0.28em solid var(--Banana-Yellow);
     padding: 0.8em 0em;
+}
+
+@media screen and (min-width: 480px){
+    #heading{
+        font-size: 3.2em;
+    }
+
+    #password-display{
+        font-size: 2.4em;
+    }
+    
+    #input-container{
+        padding: 3.2em;
+    }
+
+    #password-length-container p:nth-child(1){
+        font-size: 2.4em;
+    }
+    
+    #password-length-container p:nth-child(2){
+        font-size: 2.4em;
+    }
+
+    .include-character label{
+        font-size: 2em;
+    }
+
+    #strength-container p{
+        font-size: 2.4em;
+    }
+
+    #generate-button{
+        font-size: 2em;
+    }
+
+    #input-container{
+        padding: 3.2em;
+    }
 }
