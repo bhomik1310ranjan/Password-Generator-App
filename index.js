@@ -109,6 +109,11 @@ generateButton.addEventListener('click', () => {
         return;
     }
 
+    if(lengthOfPassword < checkboxCount){
+        lengthOfPassword = checkboxCount;
+        handleSilder();
+    }
+
     password = "";
     let charactersInclude = [];
     if(includeUppercaseLetters.checked){
