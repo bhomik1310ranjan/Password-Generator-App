@@ -105,7 +105,7 @@ let password = "";
 const generateButton = document.querySelector('#generate-button');
 
 generateButton.addEventListener('click', () => {
-    if(checkboxCount == 0){
+    if(checkboxCount === 0){
         return;
     }
 
